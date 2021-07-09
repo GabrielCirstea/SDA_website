@@ -48,8 +48,9 @@ def index(grupa):
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'] +'/'+ str(grupa), filename))
-            # flash('File successfully uploaded')
-            flash(str(Verificare(file.filename,grupa)));
+            # flash(str(Verificare(file.filename,grupa)));
+            # no longer active
+            flash("Feature disable")
             return redirect('/'+str(grupa))
         else:
             flash('Allowed file types is py')
